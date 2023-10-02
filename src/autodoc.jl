@@ -491,7 +491,7 @@ function swaggerhtml() :: HTTP.Response
             <script>
                 window.onload = () => {
                     window.ui = SwaggerUIBundle({
-                        url: window.location.origin + "$(getschemapath())",
+                        url: window.location.href.replace('$(docspath)', '$(getschemapath())'),
                         dom_id: '#swagger-ui',
                     });
                 };
